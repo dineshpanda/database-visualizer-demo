@@ -1,0 +1,10 @@
+{
+    "dependencies": {
+        "http-server": "^0.12.1",
+        "jsplumbtoolkit": "file:../../jsplumbtoolkit.tgz",
+        "jsplumbtoolkit-demo-support": "file:../../jsplumbtoolkit-demo-support.tgz",
+        "jsplumbtoolkit-drop": "file:../../jsplumbtoolkit-drop.tgz",
+        "jsplumbtoolkit-syntax-highlighter": "file:../../jsplumbtoolkit-syntax-highlighter.tgz",
+        "jsplumbtoolkit-undo-redo": "file:../../jsplumbtoolkit-undo-redo.tgz"
+    }
+}

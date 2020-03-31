@@ -1,0 +1,264 @@
+{
+  "nodes": [{
+    "id": "de7c6578-ec3f-45f9-b4ec-1abbf06c503a",
+    "top": -340,
+    "left": -420,
+    "name": "articles",
+    "type": "table",
+    "scope": [{
+      "id": "56e5b16b-9cd1-4adb-92ed-0739b5793d38",
+      "name": "first_scope",
+      "conditions": [{
+	"column": "201f2dca-bd0f-4210-9afb-8837e32f2dd5",
+	"operator": "==",
+	"clause_type": "and",
+	"compare_value": "100, 200, 300, 400"
+      }, {
+	"column": "969a25bf-b395-4c04-b349-a162a468a434",
+	"clause_type": "or",
+	"compare_value": {
+	  "TRUE": true,
+	  "FALSE": true
+	}
+      }, {
+	"column": "969a25bf-b395-4c04-b349-a162a468a434",
+	"clause_type": "not",
+	"compare_value": {
+	  "NIL": true
+	}
+      }]
+    }, {
+      "id": "1dfe325b-072d-4095-a927-893af807a253",
+      "name": "second_scope",
+      "conditions": [{
+	"column": "dc582b8c-4fe3-40f1-a019-abed10388314",
+	"operator": "\u003c=",
+	"clause_type": "and",
+	"compare_value": "03/31/2020 7:00 PM"
+      }, {
+	"column": "969a25bf-b395-4c04-b349-a162a468a434",
+	"clause_type": "or",
+	"compare_value": {
+	  "TRUE": true,
+	  "FALSE": true
+	}
+      }],
+      "linked_scopes": ["56e5b16b-9cd1-4adb-92ed-0739b5793d38"]
+    }, {
+      "id": "c3b592fa-112d-4a7b-802f-da016f0505cd",
+      "name": "third_scope",
+      "conditions": [{
+	"column": "bec29aa6-5d0a-4f9c-a739-26ee8d66e335",
+	"operator": "\u003c=",
+	"clause_type": "and",
+	"compare_value": "03/31/2020 8:40 PM"
+      }]
+    }],
+    "columns": [{
+      "id": "201f2dca-bd0f-4210-9afb-8837e32f2dd5",
+      "name": "id",
+      "datatype": "integer",
+      "primaryKey": true,
+      "nonEditable": true,
+      "nonDeletable": true
+    }, {
+      "id": "75a850ac-0e94-4725-a75c-49dd5c8f9c56",
+      "name": "content",
+      "datatype": "text",
+      "primaryKey": false,
+      "validation": {
+	"format": {
+	  "regex": "",
+	  "message": ""
+	},
+	"length": {
+	  "maximum": "",
+	  "minimum": ""
+	},
+	"presence": {
+	  "message": ""
+	},
+	"inclusion": {
+	  "data": ""
+	},
+	"uniqueness": {
+	  "message": ""
+	}
+      },
+      "nonEditable": false,
+      "defaultValue": "",
+      "nonDeletable": false
+    }, {
+      "id": "969a25bf-b395-4c04-b349-a162a468a434",
+      "name": "published",
+      "datatype": "boolean",
+      "primaryKey": false,
+      "validation": {
+	"format": {
+	  "enabled": false
+	},
+	"length": {
+	  "enabled": false
+	},
+	"presence": {
+	  "enabled": false
+	},
+	"exclusion": {
+	  "enabled": false
+	},
+	"inclusion": {
+	  "enabled": false
+	},
+	"uniqueness": {
+	  "enabled": false,
+	  "case_sensitive": false
+	}
+      },
+      "nonEditable": false,
+      "defaultValue": "",
+      "nonDeletable": false
+    }],
+    "class_name": "Article",
+    "table_name": "articles",
+    "user_accounts": false,
+    "humanized_plural": "articles",
+    "titleized_plural": "Articles",
+    "underscore_plural": "articles",
+    "humanized_singular": "article",
+    "indefinite_article": "An",
+    "primary_descriptor": "dc582b8c-4fe3-40f1-a019-abed10388314",
+    "titleized_singular": "Article",
+    "underscore_singular": "article"
+  }, {
+    "id": "3f2b3f6c-469f-45e6-92f3-6b6318b20389",
+    "top": -320,
+    "left": -10,
+    "name": "comments",
+    "type": "table",
+    "columns": [{
+      "id": "ffa65698-4fcc-49f4-b19c-0035c27d4e20",
+      "name": "id",
+      "datatype": "integer",
+      "primaryKey": true,
+      "nonEditable": true,
+      "nonDeletable": true
+    }, {
+      "id": "ea5fa3e0-e1b9-4288-b7b5-5eab1169a0ab",
+      "name": "created_at",
+      "datatype": "datetime",
+      "primaryKey": false,
+      "nonEditable": true,
+      "nonDeletable": true
+    }, {
+      "id": "f14aee79-e7d7-4b21-a80f-feec4d5b646a",
+      "name": "updated_at",
+      "datatype": "datetime",
+      "primaryKey": false,
+      "nonEditable": true,
+      "nonDeletable": true
+    }, {
+      "id": "480834a1-4a2b-48ac-98fc-e541c038a18d",
+      "name": "description",
+      "datatype": "text",
+      "primaryKey": false,
+      "validation": {
+	"format": {
+	  "enabled": false
+	},
+	"length": {
+	  "enabled": false
+	},
+	"presence": {
+	  "enabled": false
+	},
+	"exclusion": {
+	  "enabled": false
+	},
+	"inclusion": {
+	  "enabled": false
+	},
+	"uniqueness": {
+	  "enabled": false,
+	  "case_sensitive": false
+	}
+      },
+      "nonEditable": false,
+      "defaultValue": "",
+      "nonDeletable": false
+    }, {
+      "id": "c27f5dc2-c4a3-490e-b0e1-4a74f5679580",
+      "name": "auto_removal_time",
+      "datatype": "time",
+      "primaryKey": false,
+      "validation": {
+	"presence": {
+	  "enabled": false
+	},
+	"exclusion": {
+	  "enabled": false
+	},
+	"inclusion": {
+	  "enabled": false
+	},
+	"uniqueness": {
+	  "enabled": false
+	}
+      },
+      "nonEditable": false,
+      "defaultValue": "",
+      "nonDeletable": false
+    }, {
+      "id": "dc4edaf4-0f80-47a7-9031-79bbb6ed95c7",
+      "name": "deleted",
+      "datatype": "boolean",
+      "primaryKey": false,
+      "validation": {
+	"presence": {
+	  "enabled": false
+	}
+      },
+      "nonEditable": false,
+      "defaultValue": "",
+      "nonDeletable": false
+    }, {
+      "id": "c82bd7f9-cc49-460f-8299-7d5735a60887",
+      "name": "article_id",
+      "datatype": "integer",
+      "primaryKey": false,
+      "validation": {
+	"length": {
+	  "enabled": false
+	},
+	"presence": {
+	  "enabled": false
+	},
+	"exclusion": {
+	  "enabled": false
+	},
+	"inclusion": {
+	  "enabled": false
+	},
+	"uniqueness": {
+	  "enabled": false
+	},
+	"numericality": {
+	  "enabled": false
+	}
+      },
+      "nonEditable": false,
+      "defaultValue": "",
+      "nonDeletable": false
+    }],
+    "class_name": "Comment",
+    "table_name": "comments",
+    "user_accounts": false,
+    "humanized_plural": "comments",
+    "titleized_plural": "Comments",
+    "underscore_plural": "comments",
+    "humanized_singular": "comment",
+    "indefinite_article": "A",
+    "primary_descriptor": "480834a1-4a2b-48ac-98fc-e541c038a18d",
+    "titleized_singular": "Comment",
+    "underscore_singular": "comment"
+  }]
+}
